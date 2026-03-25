@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!---Dark Mode Toggle-->
+    <div class="theme-toggle" id="theme-toggle">Dark Mode</div>
+     
+    <!-- Container -->
+    <div class="container">
+    <h1>Most Active Users</h1>
+<!-- loader -->
+    <div class="spinner" id="spinner" style="display: none;">
+        <i class="fa-solid fa-cog fa-spin"></i>
+    </div>
+
+     <!-- Table -->
+     <table id="data-table" >
+        <thead>
+            <tr>
+                <th  onclick="sortTable(0)" class="name-column">Name <i class="fas fa-sort" id="icon-0"></i></th>
+                <th  onclick="sortTable(1)" class="email-column">Email <i class="fas fa-sort" id="icon-1"></i></th>
+                <th  onclick="sortTable(2)" class="username-column">Username <i class="fas fa-sort" id="icon-2"></i></th>
+                <th  onclick="sortTable(3)" class="country-column">Country<i class="fas fa-sort"></i></th>
+
+            </tr>
+        </thead>
+        <tbody id="table-body">
+    <!-- dynamic  rows -->
+        </tbody>
+     </table>
+     <!-- Pagination -->
+      <div class="pagination" id="pagination" style="display: none";>
+        <button type="button" id="prev-btn" title="Previous page" onclick="prevPage()">
+             <i class="fas fa-chevron-left"></i>        </button>
+
+        <span id="page-number">1</span>
+                <button type="button" id="next-btn" title="Next page" onclick="nextPage()">
+                <i class="fas fa-chevron-right"></i>  
+                </button>    
+            </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
